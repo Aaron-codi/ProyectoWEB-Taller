@@ -1,0 +1,107 @@
+/* Aca aseguro que el main ocupe todo (problemas anteriores de que no lo hacia D:) */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family:;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* permite que el main ocupe todo */
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 3px solid #0b57a4;
+}
+
+header img {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+
+.buscar {
+  display: flex;
+  align-items: center;
+}
+
+.buscar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.buscar button {
+  background-color: #0b57a4;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #0b57a4;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(11,87,164,0.08);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+nav a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+
+main {
+  flex: 1; 
+  padding: 40px 20px;
+  text-align: center;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caja {
+  background: lightgray;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+footer {
+  background-color: #0b57a4;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  margin-top: 0;
+}
