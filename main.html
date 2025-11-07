@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página proyecto prototipo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página proyecto prototipo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<input type="checkbox" id="menu-toggle">
 
 <header>
-<img src="img/Logo_provisional.jpg" alt="Logo AFA">
-<div class="buscar">
-<input type="text" placeholder="Buscar...">
-<button>Buscar</button>
-</div>
+  <label for="menu-toggle" class="menu-toggle">☰</label>
+  <img src="img/Logo_provisional.jpg" alt="Logo AFA" class="logo">
 </header>
 
 
-<nav>
-<ul>
-<li><a href="#">Inicio</a></li>
-<li><a href="#">Selecciones</a></li>
-<li><a href="#">Torneos</a></li>
-<li><a href="#">Noticias</a></li>
-<li><a href="#">Contacto</a></li>
-</ul>
-</nav>
-
+<aside class="side-menu">
+  <nav>
+    <ul>
+      <li class="menu-header">
+        <img src="img/Logo_provisional.jpg" alt="Logo AFA" class="logo-menu">
+        <label for="menu-toggle" class="close-btn">✕</label>
+      </li>
+      <li><a href="main.html" class="active">Inicio</a></li>
+      <li><a href="galeria.html.css.javiergarcia/galeria.html">Galería</a></li>
+      <li><a href="Contacto/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</aside>
 
 <main>
-<div class="caja">
-<h2>Bienvenido</h2>
-<p>Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas
-    Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas
-    Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas
-</p>
-</div>
+  <div class="caja">
+    <h2>Bienvenido</h2>
+    <p>Bienvenidos a nuestro sitio web.
+Este proyecto tiene como objetivo presentar una página web estática que refleje el diseño, la estructura y las funciones básicas de un portal informativo moderno. Desde aquí podés acceder a las distintas secciones del sitio, donde encontrarás información sobre selecciones, torneos, noticias y una galería de imágenes relacionadas con el fútbol argentino.
 
+Nuestro propósito es aplicar los conocimientos de desarrollo web aprendidos, utilizando HTML y CSS para crear un entorno visual atractivo, ordenado y accesible.
+<hr>
+Integrantes
 
-<div class="caja">
-<h3>Sección</h3>
-<p>Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas.
-    Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas
-    Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas
+Javier Garcia — Thiago Alí Pérez — Aaron Cuevas
+Grupo: 511
 </p>
-</div>
+  </div>
+
+  <div class="caja">
+    <h3>Sección</h3>
+    <p>Deberia estar la tabla aca</p>
+  </div>
 </main>
 
-
 <footer>
-<p>© 2025 Pagina de ejemplo para proyecto Web Estatica grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas</p>
+  <p>© 2025 Página de ejemplo Web Estática grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas</p>
 </footer>
-
 
 </body>
 </html>

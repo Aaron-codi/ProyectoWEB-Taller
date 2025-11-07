@@ -1,53 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>galeria</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
-    <div class="row">
-        
-        <div class="column">
-          <img alt="" src="futbol1.jpeg"/>
-          <img alt="" src="futbol2.webp"/>
-          <img alt="" src="futbol3.jpeg"/>
-          <img alt="" src="futbol4.jpg"/>
-          <img alt="" src="futbol5.jpg"/>
-          <img alt="" src="futbol22.jpg"/>
-          <img alt="" src="futbol25.jpg"/>
-        </div>
 
-        <div class="column">
-          <img alt="" src="futbol6.webp"/>
-          <img alt="" src="futbol7.jpg"/>
-          <img alt="" src="futbol8.jpeg"/>
-          <img alt="" src="futbol9.jpeg"/>
-          <img alt="" src="futbol10.webp"/>
-          <img alt="" src="futbol23.jpg"/>
-          <img alt="" src="futbol24.jpg"/>
-        </div>
+<input type="checkbox" id="menu-toggle">
 
+<header>
+  <label for="menu-toggle" class="menu-toggle">☰</label>
+  <a href="../main.html"><img src="../img/Logo_provisional.jpg" alt="Logo AFA" class="logo"></a>
+</header>
 
-        <div class="column">
-          <img alt="" src="futbol11.jpeg"/>
-          <img alt="" src="futbol12.jpeg"/>
-          <img alt="" src="futbol13.jpeg"/>
-          <img alt="" src="futbol14.jpg"/>
-          <img alt="" src="futbol15.webp"/>
-        </div>
+<aside class="side-menu">
+  <nav>
+    <ul>
+      <li class="menu-header">
+        <img src="../img/Logo_provisional.jpg" alt="Logo AFA" class="logo-menu">
+        <label for="menu-toggle" class="close-btn">✕</label>
+      </li>
+      <li><a href="../main.html">Inicio</a></li>
+      <li><a href="galeria.html" class="active">Galería</a></li>
+      <li><a href="../Contacto/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</aside>
 
-        <div class="column">
-          <img alt="" src="futbol16.jpeg"/>
-          <img alt="" src="futbol17.jpeg"/>
-          <img alt="" src="futbol18.webp"/>
-          <img alt="" src="futbol19.jpeg"/>
-          <img alt="" src="futbol20.jpg"/>
-          <img alt="" src="futbol21.jpeg"/>
-        </div>
+<main>
+  <h2 class="titulo-galeria">Galería de Imágenes</h2>
 
+  <div class="row">
+    <div class="column">
+      <img src="futbol1.jpeg" alt="">
+      <img src="futbol2.webp" alt="">
+      <img src="futbol3.jpeg" alt="">
+      <img src="futbol4.jpg" alt="">
+      <img src="futbol5.jpg" alt="">
+      <img src="futbol22.jpg" alt="">
+      <img src="futbol25.jpg" alt="">
     </div>
+
+    <div class="column">
+      <img src="futbol6.webp" alt="">
+      <img src="futbol7.jpg" alt="">
+      <img src="futbol8.jpeg" alt="">
+      <img src="futbol9.jpeg" alt="">
+      <img src="futbol10.webp" alt="">
+      <img src="futbol23.jpg" alt="">
+      <img src="futbol24.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="futbol11.jpeg" alt="">
+      <img src="futbol12.jpeg" alt="">
+      <img src="futbol13.jpeg" alt="">
+      <img src="futbol14.jpg" alt="">
+      <img src="futbol15.webp" alt="">
+    </div>
+
+    <div class="column">
+      <img src="futbol16.jpeg" alt="">
+      <img src="futbol17.jpeg" alt="">
+      <img src="futbol18.webp" alt="">
+      <img src="futbol19.jpeg" alt="">
+      <img src="futbol20.jpg" alt="">
+      <img src="futbol21.jpeg" alt="">
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Página de ejemplo Web Estática grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas</p>
+</footer>
+
 </body>
 </html>

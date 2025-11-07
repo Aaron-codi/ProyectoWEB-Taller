@@ -1,5 +1,4 @@
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 header {
   position: fixed;
   top: 0;
@@ -82,6 +80,7 @@ header {
   transform: translateX(0);
 }
 
+/* LOGO Y CIERRE */
 .menu-header {
   position: relative;
   text-align: center;
@@ -125,46 +124,79 @@ header {
   color: #004080;
 }
 
-/*  Galeria */
+/*Formulario   */
 main {
   flex: 1;
   padding: 110px 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.caja-contacto {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
   text-align: center;
 }
 
-.titulo-galeria {
-  font-size: 1.8rem;
+.caja-contacto h2 {
   color: #0b57a4;
-  margin-bottom: 30px;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  max-width: 1200px;
+.caja-contacto p {
+  color: #1f2a44;
+  margin-bottom: 25px;
+  font-size: 1rem;
 }
-.column {
-  flex: 1 1 250px;
+
+.form-contacto {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: left;
 }
-.column img {
+
+.form-contacto label {
+  font-weight: 600;
+  color: #0b57a4;
+}
+
+.form-contacto input,
+.form-contacto textarea {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
+  padding: 10px 14px;
+  border: 1px solid #cdd6e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
 }
-.column img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 87, 164, 0.25);
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+.form-contacto button {
+  align-self: center;
+  background-color: #0b57a4;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.form-contacto button:hover {
+  background-color: #007bff;
 }
 
 footer {
