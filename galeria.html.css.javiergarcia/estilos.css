@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+img {
+    width: 100%;
+    height: auto;  
+    display: block;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+
+.column {
+    flex: 25%;
+    padding: 5px;
+}
