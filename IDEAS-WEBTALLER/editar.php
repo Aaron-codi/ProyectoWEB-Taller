@@ -1,44 +1,39 @@
 <?php
-$conn = mysqli_connect("localhost","root","", "alumnos_db");
+$conn = mysqli_connect("localhost", "root", "", "ligas_db");
 $id = $_GET['id'];
-$resultado = mysqli_query($conn, "SELECT * FROM  alumnos WHERE id=$id");
-$fila = mysqli_fetch_assoc($resultado);
+$res = mysqli_query($conn, "SELECT * FROM datosliga WHERE id=$id");
+$fila = mysqli_fetch_assoc($res);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update form</title>
-    <link  rel="stylesheet" href="estilos/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-    crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar equipo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="m-3">Editar alumno</h1>
-    <form action="actualizar.php" method="POST" class="mx-3 p-2" style="width: 1000px;">
-        <input type="hidden" name="id" value="<?= $fila ['id'] ?>">
-        <div>
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" name="nombre" class="form-control" id="nombre" value="<?= $fila['nombre'] ?>">
-        </div>
-        
-        <div>
-            <label for="edad" class="form-label">Edad</label>
-            <input type="number" name="edad" class="form-control" id="edad" value="<?= $fila['edad'] ?>">
-        </div>
-        
-        <div>
-            <label for="curso" class="form-label">Curso</label>
-            <input type="text" name="curso" class="form-control" id="curso" value="<?= $fila['curso'] ?>">
-        </div>
+  <div class="container mt-4">
+    <h2>Editar equipo</h2>
+    <form action="actualizarLigas.php" method="POST">
+      <input type="hidden" name="id" value="<?= $fila['id'] ?>">
 
-        <button type="submit" class="btn btn-outline-dark mx-3">Actualizar</button>
-        <a class="btn btn-outline-dark mx-3" href="index.php" role="button">Volver</a>
+      <div class="mb-3">
+        <label class="form-label">Posición</label>
+        <input type="number" name="posicion" class="form-control" value="<?= $fila['posicion'] ?>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nombre del Equipo</label>
+        <input type="text" name="nombredelequipo" class="form-control" value="<?= $fila['nombredelequipo'] ?>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Puntos</label>
+        <input type="number" name="puntos" class="form-control" value="<?= $fila['puntos'] ?>">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+      <a href="torneos.php" class="btn btn-secondary">Volver</a>
     </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
-    crossorigin="anonymous"></script>
+  </div>
 </body>
 </html>

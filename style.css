@@ -242,5 +242,21 @@ footer a {
   width: 100%; 
 }
 
+.btn-crud {
+  display: inline-block;
+  background-color: #0b57a4;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-crud:hover {
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+
+
 
 
