@@ -1,0 +1,99 @@
+<?php
+// Conexión con la base de datos
+$conn = mysqli_connect("localhost", "root", "", "ligas_db");
+
+// Verificar conexión
+if (!$conn) {
+  die("Error de conexión: " . mysqli_connect_error());
+}
+
+// Consultar los datos
+$resultado = mysqli_query($conn, "SELECT * FROM datosliga ORDER BY posicion ASC");
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página proyecto prototipo</title>
+  <link rel="stylesheet" href="../CSS-paginas/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<header>
+  <label for="menu-toggle" class="menu-toggle">☰</label>
+  <img src="../img/afa.webp" alt="Logo AFA" class="logo">
+</header>
+
+<aside class="side-menu">
+  <nav>
+    <ul>
+      <li class="menu-header">
+        <img src="../img/afa.webp" alt="Logo AFA" class="logo-menu">
+        <label for="menu-toggle" class="close-btn">✕</label>
+      </li>
+      <li><a href="main.php" class="active">Inicio</a></li>
+      <li><a href="../galeria.html.css.javiergarcia/galeria.html">Galería</a></li>
+      <li><a href="../Contacto/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</aside>
+<main>
+  <div class="caja">
+    <h2>Bienvenido</h2>
+    <p>
+      Bienvenidos a nuestro sitio web.<br>
+      Este proyecto tiene como objetivo presentar una página web estática que refleje el diseño,
+      la estructura y las funciones básicas de un portal informativo moderno.
+      Desde aquí podés acceder a las distintas secciones del sitio, donde encontrarás información
+      sobre selecciones, torneos, noticias y una galería de imágenes relacionadas con el fútbol argentino.
+      <hr>
+      Integrantes<br>
+      <strong>Javier Garcia — Thiago Alí Pérez — Aaron Cuevas</strong><br>
+      Grupo: 511
+    </p>
+  </div>
+
+  <div class="caja">
+    <h3>Tabla de Ligas</h3>
+    <table class="table table-bordered table-striped" style="background:white;">
+      <thead class="table-primary">
+        <tr>
+          <th>Posición</th>
+          <th>Nombre del Equipo</th>
+          <th>Puntos</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
+          <tr>
+            
+            <td><?= $fila['posicion'] ?></td>
+            <td><?= $fila['nombredelequipo'] ?></td>
+            <td><?= $fila['puntos'] ?></td>
+            <td>
+              <a href="editar.php?id=<?= $fila['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
+              <a href="eliminar.php?id=<?= $fila['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar este equipo?')">Eliminar</a>
+            </td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+
+    <a href="agregarEquipos.php" class="btn btn-outline-primary mt-3" role="button">Agregar nuevo equipo</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Página de ejemplo Web Estática grupo 511. Javier Garcia - Thiago Alí Pérez - Aaron Cuevas</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<?php mysqli_close($conn); ?>
